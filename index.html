@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF 在线预览</title>
+    <link rel="stylesheet" href="./src/styles/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="toolbar">
+        <input type="file" id="file-input" accept="application/pdf" />
+        <div class="controls">
+          <button id="prev-page">上一页</button>
+          <span
+            >页码: <span id="page-num"></span> / <span id="page-count"></span
+          ></span>
+          <button id="next-page">下一页</button>
+          <select id="zoom-select">
+            <option value="0.5">50%</option>
+            <option value="1" selected>100%</option>
+            <option value="1.5">150%</option>
+            <option value="2">200%</option>
+          </select>
+          <button id="download-btn">下载</button>
+          <button id="print-btn">打印</button>
+        </div>
+      </div>
+      <div class="pdf-container">
+        <canvas id="pdf-canvas"></canvas>
+      </div>
+    </div>
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>
